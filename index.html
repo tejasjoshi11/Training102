@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Diary - HB Infotech Solutions</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        header {
+            background: linear-gradient(90deg, #343a40, #4d5257);
+            color: white;
+            padding: 20px 30px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            font-size: 1.2rem; 
+        }
+        .nav-left {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .nav-right {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            font-weight: 400;
+            text-align: center; 
+            margin-top: 10px; /* Added margin for spacing */
+        }
+
+        /* Details Section */
+        .details {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        .details h2 {
+            margin: 5px 0;
+            font-size: 1.5rem; 
+        }
+        .details p {
+            margin: 5px 0;
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 20px; 
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #0066CC;
+            transform: translateY(-5px);
+        }
+        button:focus {
+            outline: none;
+        }
+
+        /* PDF Viewer Styling */
+        iframe {
+            width: 90%; 
+            height: 600px;
+            margin: 20px auto;
+            border: 2px solid #003366;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: block; 
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 30px; 
+            text-align: center;
+            font-size: 1.2rem; 
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .nav-left {
+                font-size: 1.5rem; 
+            }
+            .nav-right {
+                font-size: 1rem; 
+            }
+            .details {
+                font-size: 1rem; 
+            }
+            .details h2 {
+                font-size: 1.3rem; 
+            }
+            button {
+                padding: 10px 15px; 
+                font-size: 14px; 
+            }
+            iframe {
+                height: 400px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <div class="nav-left">Daily Diary</div>
+    <div class="nav-right">Training at HB Infotech Solutions</div>
+</header>
+
+<!-- Buttons for Weeks -->
+<div class="button-container">
+    <button onclick="loadPDF('https://github.com/your-repo/week1.pdf')">WEEK 1</button>
+    <button onclick="loadPDF('https://github.com/your-repo/week2.pdf')">WEEK 2</button>
+    <button onclick="loadPDF('https://github.com/your-repo/week3.pdf')">WEEK 3</button>
+    <button onclick="loadPDF('https://github.com/your-repo/week4.pdf')">WEEK 4</button>
+    <button onclick="loadPDF('https://github.com/your-repo/week5.pdf')">WEEK 5</button>
+</div>
+
+<!-- PDF Viewer -->
+<iframe id="pdfViewer" src="" frameborder="0"></iframe>
+
+<!-- Footer -->
+<footer>
+    <a href="https://in.linkedin.com/in/tejasjoshi11">&copy; Tejas Joshi</a>
+</footer>
+
+<script>
+    function loadPDF(pdfUrl) {
+        document.getElementById('pdfViewer').src = pdfUrl;
+    }
+</script>
+
+</body>
+</html>
